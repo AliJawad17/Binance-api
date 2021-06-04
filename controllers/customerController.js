@@ -1,21 +1,21 @@
 const {Customer, validate} = require('../models/customer');
-const {Trade} = require('../models/trade');
+// const {Trade} = require('../models/trade');
 
-const setupTrade = async (req, res, next) => {
-    // const {error} = validate(req.body);
-    // if(error) return res.status(422).send(error.details[0].message);
-    const data = req.body;
+// const setupTrade = async (req, res, next) => {
+//     // const {error} = validate(req.body);
+//     // if(error) return res.status(422).send(error.details[0].message);
+//     const data = req.body;
 
-    let trade = await new Trade({
-        apiKey: data.apiKey,
-        secretKey: data.secretKey,
-        margin: data.margin,
-        leverage: data.leverage,
-        balanceBuffer: data.balanceBuffer
-    });
-    trade = await trade.save();
-    res.redirect('/');
-}
+//     let trade = await new Trade({
+//         apiKey: data.apiKey,
+//         secretKey: data.secretKey,
+//         margin: data.margin,
+//         leverage: data.leverage,
+//         balanceBuffer: data.balanceBuffer
+//     });
+//     trade = await trade.save();
+//     res.redirect('/');
+// }
 
 const getAllCustomers = async (req, res, next) => {
     const list = await Customer.find().exec();
@@ -28,9 +28,9 @@ const getAddCustomerView = (req, res, next) => {
     res.render('addCustomer');
 }
 
-const setupTradeView = (req, res, next) => {
-    res.render('setupTrade');
-}
+// const setupTradeView = (req, res, next) => {
+//     res.render('setupTrade');
+// }
 
 const addCustomer = async (req, res, next) => {
     const {error} = validate(req.body);
@@ -108,6 +108,6 @@ module.exports = {
     updateCustomer,
     getDeleteCustomerView,
     deleteCustomer,
-    setupTrade,
-    setupTradeView
+    // setupTrade,
+    // setupTradeView
 }

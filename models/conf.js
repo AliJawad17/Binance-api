@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-const tradeSchema = new mongoose.Schema({
+const confSchema = new mongoose.Schema({
     apiKey: {
         type: String,
         // minlength: 5,
@@ -32,9 +32,9 @@ const tradeSchema = new mongoose.Schema({
     }
 });
 
-const Trade = mongoose.model('Trade', tradeSchema);
+const Conf = mongoose.model('Conf', confSchema);
 
-const validateTrade = (trade) => {
+const validateConf = (conf) => {
     const schema = {
         apiKey: Joi.string().required(),
         secretKey: Joi.string().required(),
@@ -43,9 +43,9 @@ const validateTrade = (trade) => {
         balanceBuffer: Joi.Number().min(0).max(100).required()
     }
 
-    return Joi.validate(trade, schema);
+    return Joi.validate(conf, schema);
 }
 
 
-module.exports.Trade = Trade;
-module.exports.validate = validateTrade;
+module.exports.Conf = Conf;
+module.exports.validate = validateConf;

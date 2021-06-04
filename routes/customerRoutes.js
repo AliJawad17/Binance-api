@@ -1,8 +1,8 @@
 const express = require('express');
 const {getAllCustomers, getAddCustomerView, addCustomer,
         getUpdateCustomerView, updateCustomer, getDeleteCustomerView, deleteCustomer, 
-        setupTrade, setupTradeView} = 
-        require('../controllers/customerController');
+        // setupTrade, setupTradeView
+        } = require('../controllers/customerController');
 
 
 const router = express.Router();
@@ -14,8 +14,8 @@ router.get('/updateCustomer/:id', getUpdateCustomerView);
 router.post('/updateCustomer/:id', updateCustomer);
 router.get('/deleteCustomer/:id', getDeleteCustomerView);
 router.post('/deleteCustomer/:id', deleteCustomer);
-router.get('/setupTrade', setupTradeView);
-router.post('/setupTrade', setupTrade);
+// router.get('/setupTrade', setupTradeView);
+// router.post('/setupTrade', setupTrade);
 
 
 module.exports = {

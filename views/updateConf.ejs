@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="font-weight-bold">Update Configuration</h4>
+    </div>
+    <div class="card-body">
+        <form action="/updateConf/<%= conf._id %>" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="apikey">API Key</label>
+                        <input type="text" class="form-control" value="<%= conf.apikey %>" name="firstname" placeholder="Enter Api key" id="apikey">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="secretKey">Secret Key</label>
+                        <input type="text" class="form-control" value="<%= conf.secretKey %>" name="secretKey" placeholder="Enter Secret key" id="secretKey">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="margin">Margin</label>
+                        <input type="number" class="form-control" value="<%= conf.margin %>" name="margin" placeholder="Enter Margin" id="margin">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="leverage">Leverage</label>
+                        <input type="text" class="form-control" value="<%= conf.leverage %>" name="leverage" placeholder="Enter Leverage" id="leverage">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="balanceBuffer">Balance Buffer</label>
+                        <input type="text" class="form-control" value="<%= conf.balanceBuffer %>" name="balanceBuffer" placeholder="Enter Balance Buffer" id="balanceBuffer">
+                    </div>
+                </div>
+                <!-- <div class="col-12">
+                    <div class="form-group">
+                        <label for="addres">Address</label>
+                        <textarea class="form-control" name="address" id="address" rows="3">
+                        <%= customer.address %>
+                        </textarea>
+                    </div>
+                </div> -->
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="/allConfs" class="btn btn-light">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

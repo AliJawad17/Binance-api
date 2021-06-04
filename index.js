@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 // const winston = require('winston');
 // const err = require('./middleware/errors');
 const customerRoutes = require('./routes/customerRoutes');
+const confRoutes = require('./routes/confRoutes');
 const app = express();
 const port = 3000;
 
@@ -49,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(customerRoutes.routes);
+app.use(confRoutes.routes);
 // app.use(err);
 
 
