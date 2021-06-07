@@ -25,7 +25,7 @@ const getAllConfs = async (req, res, next) => {
     console.log('all conf called');
     const list = await Conf.find().exec();
     console.log(list);
-    res.render('/allConfs', {
+    res.render('allConfs', {
         confs: list
     });
 }
