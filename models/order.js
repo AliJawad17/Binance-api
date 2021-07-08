@@ -20,6 +20,16 @@ const orderSchema = new mongoose.Schema({
         min: 0,
         // minlength: 11,
         required: true
+    }, 
+    amount: {
+        type: Number,
+        min: 0,
+        // minlength: 11,
+        required: true
+    },
+    confId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
     }
 });
 
@@ -30,7 +40,7 @@ const validateOrder = (order) => {
         tokenname: Joi.string().max(50).required(),
         buyprice: Joi.Number().min(0).required(),
         stoploss: Joi.Number().min(0).required(),
-        // cnic: Joi.string().required(),
+        amount: Joi.Number().required(),
         // address: Joi.string().required()
     }
 

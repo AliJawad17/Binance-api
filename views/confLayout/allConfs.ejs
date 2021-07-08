@@ -13,19 +13,22 @@
         <table class="table table-hover">
             <thead class="table-dark">
                 <tr>
-                    <th scope="col">API Key</th>
-                    <th scope="col">Secret Key</th>
+                    <th scope="col">Conf Name</th>
+                    <!-- <th scope="col">API Key</th>
+                    <th scope="col">Secret Key</th> -->
                     <th scope="col">Margin</th>
                     <th scope="col">Leverage</th>
                     <th scope="col">Balance Buffer</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <% if(confs.length > 0) { %>
                     <% for(let conf of confs) { %>
                     <tr>
-                        <td><%= conf.apiKey %></td>
-                        <td><%= conf.secretKey %></td>
+                        <td><%= conf.name %></td>
+                        <!-- <td><%= conf.apiKey %></td>
+                        <td><%= conf.secretKey %></td> -->
                         <td><%= conf.margin %></td>
                         <td><%= conf.leverage %></td>
                         <td><%= conf.balanceBuffer %></td>

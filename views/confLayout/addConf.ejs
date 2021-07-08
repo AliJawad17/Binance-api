@@ -5,40 +5,52 @@
     <div class="card-body">
         <form action="/addConf" method="post">
             <div class="row">
-                <div class="col-12">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="name">Configuration Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Conf Name" id="name">
+                    </div>
+                </div>
+                <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="apiKey">API Key</label>
                         <input type="text" class="form-control" name="apiKey" placeholder="Enter API Key" id="apiKey">
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="secretKey">Secret Key</label>
                         <input type="text" class="form-control" name="secretKey" placeholder="Enter Secret Key" id="secretKey">
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="margin">Margin</label>
-                        <input type="number" class="form-control" name="margin" placeholder="Enter Margin" id="margin">
+                        <select name="margin" id="margin" class="form-control" 
+                            placeholder="Select Margin">
+                            <!-- <option value="">Select Margin</option> -->
+                            <option value="CROSSED">CROSSED</option>
+                            <!-- <option value="ISOLATED">ISOLATED</option> -->
+                        </select>
+                        <!-- <input type="text" class="form-control" name="margin" placeholder="Enter Margin" id="margin"> -->
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="leverage">Leverage</label>
-                        <input type="text" class="form-control" name="leverage" placeholder="Enter Leverage" id="leverage">
+                        <input type="number" class="form-control" name="leverage" placeholder="Enter Leverage" id="leverage">
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="balanceBuffer">Balance Buffer</label>
-                        <input type="text" class="form-control" name="balanceBuffer" placeholder="Enter Balance Buffer" id="balanceBuffer">
+                        <input type="number" class="form-control" name="balanceBuffer" placeholder="Enter Balance Buffer" id="balanceBuffer">
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="" style="margin-top: 15px;">
                 <button itype="submit" class="btn btn-success">Submit</button>
-                <a href="/" class="btn btn-light">Cancel</a>
+                <a href="/allConfs" class="btn btn-light">Cancel</a>
             </div>
         </form>
     </div>

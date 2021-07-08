@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const customerRoutes = require('./routes/customerRoutes');
 const confRoutes = require('./routes/confRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const tickerRoutes = require('./routes/tickerRoutes');
 const app = express();
 const port = 3000;
 
@@ -53,6 +54,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(customerRoutes.routes);
 app.use(confRoutes.routes);
 app.use(orderRoutes.routes);
+app.use(tickerRoutes.routes);
 // app.use(err);
 
 

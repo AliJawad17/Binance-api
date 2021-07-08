@@ -19,13 +19,13 @@ const {Customer, validate} = require('../models/customer');
 
 const getAllCustomers = async (req, res, next) => {
     const list = await Customer.find().exec();
-    res.render('customerlist', {
+    res.render('customerLayout/customerlist', {
         customers: list
     });
 }
 
 const getAddCustomerView = (req, res, next) => {
-    res.render('addCustomer');
+    res.render('customerLayout/addCustomer');
 }
 
 // const setupTradeView = (req, res, next) => {
@@ -51,7 +51,7 @@ const getUpdateCustomerView = async (req, res, next) => {
     try {
         const id = req.params.id;
         const onecustomer = await Customer.findById(id).exec();
-        res.render('updateCustomer', {
+        res.render('customerLayout/updateCustomer', {
             customer: onecustomer
         });
     } catch (error) {
@@ -80,7 +80,7 @@ const getDeleteCustomerView = async (req, res, next) => {
     try {
         const id = req.params.id;
         const onecustomer = await Customer.findById(id).exec();
-        res.render('deleteCustomer', {
+        res.render('customerLayout/deleteCustomer', {
             customer: onecustomer
         });
     } catch (error) {

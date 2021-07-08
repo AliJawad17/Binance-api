@@ -23,8 +23,30 @@
                         <input type="number" class="form-control" value="<%= order.stoploss %>" name="stoploss" placeholder="Enter your Stop Loss" id="stoploss">
                     </div>
                 </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="amount">Amount</label>
+                        <input type="number" class="form-control" value="<%= order.amount %>" name="amount" placeholder="Enter your Amount" id="amount">
+                    </div>
+                </div>
+                <div class="col-6 form-group">
+                    <label class="col-form-label" for="confId">Configuration</label>
+                    <select name="confId" id="confId" class="form-control" value="<%= order.confId %>">
+                        <% if(confs.length > 0) { %>
+                            <option value="">Select Configuration</option>
+                        <% } else { %>
+                            <option value="">No Configuration Available</option>
+                        <% } %>
+
+                        <% for(let conf of confs) { %>
+                            <option value="<%= conf.id %>"><%= conf.name %></option>
+                        <% } %>
+                    </select>
+                  <!-- <div *ngIf="titleSelect.controls['title'].errors?.required &&
+                  titleSelect.controls['title'].touched" class="required">Option Required</div> -->
+                </div>
             </div>
-            <div class="">
+            <div class="" style="margin-top: 15px;">
                 <button type="submit" class="btn btn-success">Update</button>
                 <a href="/allOrders" class="btn btn-light">Cancel</a>
             </div>

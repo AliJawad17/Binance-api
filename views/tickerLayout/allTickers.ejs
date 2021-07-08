@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-8">
+                <h4 class="font-weight-bold">Tickers</h4>
+            </div>
+            <!-- <div class="col-4">
+                <a href="/addConf" class="btn btn-success float-right"><i class="fa fa-plus mr-1"></i> Add Ticker</a>
+            </div> -->
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">NAME</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">CHANGE 24H</th>
+                    <th scope="col">HIGH</th>
+                    <th scope="col">LOW</th>
+                    <!-- <th scope="col">Actions</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <% if(tickers.length > 0) { %>
+                    <% for(let ticker of tickers) { %>
+                    <tr>
+                        <td><%= ticker.symbol %></td>
+                        <td><%= ticker.close %></td>
+                        <td><%= ticker.open %></td>
+                        <td><%= ticker.high %></td>
+                        <td><%= ticker.low %></td>
+                        <!-- <td>
+                            <a href="/updateConf/<%= ticker._id %>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                            <a href="/deleteConf/<%= ticker._id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                        </td> -->
+                    </tr>
+                    <% } %>
+                <% } else { %>
+                    <tr>
+                        <td>No data found</td>
+                    </tr>
+                <% } %>
+            </tbody>
+            </table>
+    </div>
+</div>

@@ -16,6 +16,8 @@
                     <th scope="col">Token Name</th>
                     <th scope="col">Buy Price</th>
                     <th scope="col">Stop Loss</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +27,7 @@
                         <th scope="row"><%= order.tokenname %></th>
                         <td><%= order.buyprice %></td>
                         <td><%= order.stoploss %></td>
+                        <td><%= order.amount %></td>
                         <td>
                             <a href="/updateOrder/<%= order._id %>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
                             <a href="/deleteOrder/<%= order._id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>

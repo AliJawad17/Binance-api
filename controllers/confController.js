@@ -5,8 +5,9 @@ const addConf = async (req, res, next) => {
     // const {error} = validate(req.body);
     // if(error) return res.status(422).send(error.details[0].message);
     const data = req.body;
-    console.log(data);
+    // console.log(data);
     let conf = await new Conf({
+        name: data.name,
         apiKey: data.apiKey,
         secretKey: data.secretKey,
         margin: data.margin,
@@ -18,14 +19,14 @@ const addConf = async (req, res, next) => {
 }
 
 const addConfView = (req, res, next) => {
-    res.render('addConf');
+    res.render('confLayout/addConf');
 }
 
 const getAllConfs = async (req, res, next) => {
-    console.log('all conf called');
+    // console.log('all conf called');
     const list = await Conf.find().exec();
-    console.log(list);
-    res.render('allConfs', {
+    // console.log(list);
+    res.render('confLayout/allConfs', {
         confs: list
     });
 }
@@ -53,7 +54,7 @@ const getUpdateConfView = async (req, res, next) => {
     try {
         const id = req.params.id;
         const c = await Conf.findById(id).exec();
-        res.render('updateConf', {
+        res.render('confLayout/updateConf', {
             conf: c
         });
     } catch (error) {
@@ -66,7 +67,9 @@ const updateConf = async(req, res, next) => {
     // if (error) return res.status(422).send(error.details[0].message);
     const id = req.params.id;
     const data = req.body;
+    console.log('update conf ', data);
     let conf = await Conf.findByIdAndUpdate(id, {
+        name: data.name,
         apiKey: data.apiKey,
         secretKey: data.secretKey,
         margin: data.margin,
@@ -82,7 +85,7 @@ const getDeleteConfView = async (req, res, next) => {
     try {
         const id = req.params.id;
         const c = await Conf.findById(id).exec();
-        res.render('deleteConf', {
+        res.render('confLayout/deleteConf', {
             conf: c
         });
     } catch (error) {

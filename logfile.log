@@ -99,3 +99,128 @@
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-07T14:52:17.716Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-07T15:05:04.072Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-07T15:07:44.176Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:48:08.918Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:49:37.730Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:51:36.787Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:55:29.619Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:55:55.115Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-06-08T14:59:30.108Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T06:40:41.708Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T06:54:01.845Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:00:55.443Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:08:24.436Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:16:21.189Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:20:40.921Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:21:45.125Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:23:00.695Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:23:02.056Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:25:09.203Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:28:46.812Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:29:30.207Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:30:12.159Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:36:52.547Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:40:23.960Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T07:44:15.407Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T08:15:06.223Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T08:17:39.000Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T08:55:34.227Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T08:59:19.932Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:00:48.143Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:02:20.913Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:03:10.800Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:03:22.533Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:03:27.167Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:04:22.331Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:05:55.496Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:06:19.852Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:07:11.522Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:09:37.998Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:12:07.639Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:13:35.150Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:14:34.952Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:17:27.896Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:18:37.369Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:20:52.653Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:21:15.332Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:21:53.203Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:22:26.994Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:35:15.753Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T09:56:10.570Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T10:04:03.841Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T11:41:52.556Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T11:43:11.248Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T11:44:12.832Z"}
+{"message":"binance is not defined","stack":"ReferenceError: binance is not defined\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:47:25)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T11:47:42.039Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T11:48:11.647Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:02:51.790Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:03:34.018Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:10:35.505Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:19:57.040Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:27:51.986Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:55:40.582Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T12:56:14.501Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:05:31.194Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:09:48.188Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:23:37.968Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:25\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:29:03.522Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:39:54.876Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:25\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:41:10.320Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:41:44.920Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:25\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:42:14.652Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:42:34.674Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:25\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:42:48.512Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:43:54.810Z"}
+{"message":"Assignment to constant variable.","stack":"TypeError: Assignment to constant variable.\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:59:17)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T13:44:27.664Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:44:56.315Z"}
+{"message":"Assignment to constant variable.","stack":"TypeError: Assignment to constant variable.\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:59:17)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T13:45:01.261Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:47:05.897Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:26\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:47:13.735Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:47:42.360Z"}
+{"message":"Cannot read property 'apiKey' of null","stack":"TypeError: Cannot read property 'apiKey' of null\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:60:26\n    at C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\model.js:4868:18\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)","level":"error","timestamp":"2021-07-07T13:47:57.758Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:48:55.118Z"}
+{"message":"resp is not defined","stack":"ReferenceError: resp is not defined\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:60:21)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T13:48:59.816Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:50:08.744Z"}
+{"message":"Assignment to constant variable.","stack":"TypeError: Assignment to constant variable.\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:59:17)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T13:50:26.444Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:51:03.965Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:54:51.816Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:58:16.273Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T13:59:44.580Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T14:03:52.349Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T14:11:15.715Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T15:04:23.100Z"}
+{"message":"respon is not defined","stack":"ReferenceError: respon is not defined\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:65:37)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-07T15:06:45.779Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-07T15:11:44.606Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T06:27:43.072Z"}
+{"message":"respon is not defined","stack":"ReferenceError: respon is not defined\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:67:37)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-08T06:30:05.625Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T06:31:53.467Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T06:36:19.213Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:05:26.116Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:10:14.065Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:10:24.888Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:19:05.499Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:32:57.614Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:38:06.589Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:39:05.313Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:39:53.298Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:43:05.228Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:45:09.906Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T07:45:24.512Z"}
+{"message":"Cast to ObjectId failed for value \"{ _id: '' }\" (type Object) at path \"_id\" for model \"Conf\"","stack":"CastError: Cast to ObjectId failed for value \"{ _id: '' }\" (type Object) at path \"_id\" for model \"Conf\"\n    at model.Query.exec (C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\query.js:4473:21)\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:64:56)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","stringValue":"\"{ _id: '' }\"","kind":"ObjectId","value":{"_id":""},"path":"_id","reason":{},"valueType":"Object","level":"error","timestamp":"2021-07-08T08:09:00.250Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T08:11:12.604Z"}
+{"message":"Cast to ObjectId failed for value \"{ _id: '' }\" (type Object) at path \"_id\" for model \"Conf\"","stack":"CastError: Cast to ObjectId failed for value \"{ _id: '' }\" (type Object) at path \"_id\" for model \"Conf\"\n    at model.Query.exec (C:\\data\\code\\CRUD\\node_modules\\mongoose\\lib\\query.js:4473:21)\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:66:56)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","stringValue":"\"{ _id: '' }\"","kind":"ObjectId","value":{"_id":""},"path":"_id","reason":{},"valueType":"Object","level":"error","timestamp":"2021-07-08T08:11:25.198Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T08:12:07.824Z"}
+{"message":"Cannot read property 'apiKey' of undefined","stack":"TypeError: Cannot read property 'apiKey' of undefined\n    at addOrder (C:\\data\\code\\CRUD\\controllers\\orderController.js:74:22)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-08T08:12:11.975Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T11:23:42.751Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T11:24:10.415Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T11:24:48.079Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T11:25:38.099Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T11:26:19.956Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T13:18:19.458Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T13:58:04.124Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T13:59:12.007Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T14:11:34.517Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T14:14:46.258Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T14:38:20.985Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T14:41:06.440Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:10:00.179Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:10:24.766Z"}
