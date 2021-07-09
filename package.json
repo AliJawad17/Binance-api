@@ -20,6 +20,7 @@
     "express-ejs-layouts": "^2.5.0",
     "joi": "^13.1.0",
     "joi-objectid": "^2.0.0",
+    "jquery": "^3.6.0",
     "mongoose": "^5.12.12",
     "node-binance-api": "^0.12.5",
     "winston": "^2.4.0"

@@ -46,7 +46,7 @@ const validateConf = (conf) => {
         secretKey: Joi.string().required(),
         margin: Joi.string().required(),
         leverage: Joi.Number().min(1).max(125).required(),
-        balanceBuffer: Joi.Number().min(0).max(100).required()
+        balanceBuffer: Joi.Number().min(1).max(100).required()
     }
 
     return Joi.validate(conf, schema);

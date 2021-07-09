@@ -224,3 +224,43 @@
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T14:41:06.440Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:10:00.179Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:10:24.766Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:43:57.989Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-08T15:44:58.476Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T08:33:07.991Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:20:10.525Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:22:16.239Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:22:58.753Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:24:56.210Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:27:07.016Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T12:48:48.636Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T13:34:26.249Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T14:49:25.826Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T14:50:53.998Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T15:03:30.335Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T15:19:02.358Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T15:19:24.402Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T15:19:32.764Z"}
+{"message":"ESOCKETTIMEDOUT","stack":"Error: ESOCKETTIMEDOUT\n    at ClientRequest.<anonymous> (C:\\data\\code\\CRUD\\node_modules\\request\\request.js:816:19)\n    at Object.onceWrapper (events.js:421:28)\n    at ClientRequest.emit (events.js:315:20)\n    at TLSSocket.emitRequestTimeout (_http_client.js:721:9)\n    at Object.onceWrapper (events.js:421:28)\n    at TLSSocket.emit (events.js:327:22)\n    at TLSSocket.Socket._onTimeout (net.js:481:8)\n    at listOnTimeout (internal/timers.js:549:17)\n    at processTimers (internal/timers.js:492:7)","code":"ESOCKETTIMEDOUT","connect":false,"level":"error","timestamp":"2021-07-09T15:20:16.686Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:22:48.310Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:34:47.900Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:38:35.027Z"}
+{"message":"Joi.Number is not a function","stack":"TypeError: Joi.Number is not a function\n    at validateConf (C:\\data\\code\\CRUD\\models\\conf.js:48:23)\n    at updateConf (C:\\data\\code\\CRUD\\controllers\\confController.js:90:21)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at newFn (C:\\data\\code\\CRUD\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:317:13)","level":"error","timestamp":"2021-07-09T16:38:48.081Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:40:03.413Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:46:45.401Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:47:52.462Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:49:39.574Z"}
+{"message":"Joi.Number is not a function","stack":"TypeError: Joi.Number is not a function\n    at validateConf (C:\\data\\code\\CRUD\\models\\conf.js:49:28)\n    at updateConf (C:\\data\\code\\CRUD\\controllers\\confController.js:90:21)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:281:22\n    at param (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:354:14)\n    at param (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at Function.process_params (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:410:3)\n    at next (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:275:10)\n    at Function.handle (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:174:3)\n    at router (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:47:12)\n    at newFn (C:\\data\\code\\CRUD\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:317:13)","level":"error","timestamp":"2021-07-09T16:49:47.852Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:50:08.312Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T16:50:22.260Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:10:15.138Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:10:18.158Z"}
+{"message":"data is not defined","stack":"ReferenceError: data is not defined\n    at getAvailableBalance (C:\\data\\code\\CRUD\\controllers\\confController.js:41:38)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-09T17:11:12.092Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:48:01.296Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:48:04.273Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:48:39.723Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:50:34.449Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:56:00.386Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:57:27.723Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:58:44.399Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T17:59:33.802Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-09T18:07:55.527Z"}

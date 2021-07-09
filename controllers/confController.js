@@ -1,5 +1,11 @@
 // const {Customer, validate} = require('../models/customer');
 const {Conf, validate} = require('../models/conf');
+const Binance = require('node-binance-api');
+
+binance = new Binance().options({
+  APIKEY: '<key>',
+  APISECRET: '<secret>'
+});
 
 const addConf = async (req, res, next) => {
     // const {error} = validate(req.body);
@@ -22,9 +28,28 @@ const addConfView = (req, res, next) => {
     res.render('confLayout/addConf');
 }
 
+const getAvailableBalance = async (req, res, next) => {
+    const key = req.body;
+    console.log('key in balance', key);
+    binance = new Binance().options({
+        APIKEY: key.apiKey,
+        APISECRET: key.secretKey
+    });
+    console.log('binance response', 111);
+    let balance = await binance.futuresBalance();
+    console.info(balance = balance[1]['availableBalance'] );
+    
+    return res.status(200).send({
+        message: "found the balance",
+        result: balance
+    });
+}
+
 const getAllConfs = async (req, res, next) => {
     // console.log('all conf called');
     const list = await Conf.find().exec();
+    // res.send(list);
+    // return list;
     // console.log(list);
     res.render('confLayout/allConfs', {
         confs: list
@@ -109,6 +134,7 @@ module.exports = {
     getAllConfs,
     // getAddCustomerView,
     // addCustomer,
+    getAvailableBalance,
     getUpdateConfView,
     updateConf,
     getDeleteConfView,

@@ -1,4 +1,75 @@
 <div class="card">
+    <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+
+        ></script>
+    <!-- <script type="text/javascript"> </script> -->
+    <script type="text/javascript">
+    // const { JSDOM } = require( "jsdom" );
+    // const { window } = new JSDOM( "" );
+    // const $ = require( "jquery" )( window );
+    // const Binance = require('node-binance-api');
+        $(document).ready(function()
+            {
+            $("select").change(async function(event){
+                // alert("Hello World");
+                var data = $("data").val();
+                var conf;
+                var id = $(this).val();
+                data = JSON.parse(data);
+                for(var i=0;i<data.length;i++){
+                    if(id == data[i]._id){
+                        console.log('we found it', data[i]);
+                        conf = data[i];
+                    }
+                }
+                const balanceBuffer = conf.balanceBuffer;
+                console.log('balanceBuffer',balanceBuffer);
+                
+                const d = {apiKey: conf.apiKey, secretKey: conf.secretKey};
+                const con = await fetch('/getAvailableBalance', {
+                    method: 'PUT', 
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(d),
+                })
+                .then(res => res.json())
+                .then((response) => {
+                    console.log('response data',response)
+                    const maxAmount = (balanceBuffer/100)*(+response['result'])
+                    console.log('maxAmount',maxAmount)
+                    if(maxAmount >=10){
+                        $("#amount").val(maxAmount);
+                    }else{
+                        alert('You have not enough balance for this trade');
+                    }
+                }).catch((err) => {
+                    console.log('error occurred');
+                    throw err;
+                })
+                // console.log('confs', con);
+                // $.get( "/allConfs", function( data ) {
+                //     $( ".result" ).html( data );
+                // });
+                // jQuery.post( url,  data , success , dataType  )
+                // $.ajax({
+                //     type: "GET",
+                //     url: "/allConfs",
+                //     dataType: "json",
+                //     success: function (result, status, xhr) {
+                //         console.log('result', result);
+                //     },
+                //     error: function (xhr, status, error) {
+                //         alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+                //     }
+                // });
+                // console.log($(confs));
+                
+            });
+        });
+    </script>
     <div class="card-header">
         <h4 class="font-weight-bold">Add New Order</h4>
     </div>
@@ -6,6 +77,9 @@
     <div class="card-body">
         <form action="/addOrder" method="post">
             <div class="row">
+                <div style="display: none;">
+                    <data value="<%= JSON.stringify(confs) %>"></data>
+                </div>
                 <div class="col-6">
                     <label class="col-form-label" for="tokenname">Token Name</label>
                     <input list="browsers" name="tokenname" id="tokenname" class="form-control"
@@ -26,6 +100,7 @@
                         <input type="number" class="form-control" name="buyprice" placeholder="Enter Buy Price" id="buyprice">
                     </div>
                 </div>
+                <!-- <button onclick=""></button> -->
                 <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="stoploss">Stop Loss</label>
@@ -35,7 +110,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label class="col-form-label" for="amount">Amount</label>
-                        <input type="number" class="form-control" name="amount" placeholder="Enter your Amount" id="amount">
+                        <input type="text" class="form-control" name="amount" placeholder="Enter your Amount" id="amount">
                     </div>
                 </div>
                 <div class="col-6 form-group">
@@ -74,3 +149,31 @@
         </form>
     </div>
 </div>
+
+
+
+
+<!-- <script>
+    
+// function onChange(e){
+//     var sel = document.getElementById('confId');
+//     console.log('hello', sel.value );
+// }
+$(document).ready(function() {
+
+// var roomID = "0"
+// $('.dropone').load('ajaxdropdown.aspx');
+// $('.droptwo').load('ajaxdropdown.aspx?drpType=room&roomid=' + roomID);
+
+$('#confId').change(function() {
+    console.log('conf id called');
+var ts = new Date().getTime();
+alert($(this).val)
+
+    $(".droptwo").empty();
+    $(".droptwo").load("ajaxdropdown.aspx?drpType=room&roomid=" + $(this).attr("value") + "&ts=" + ts);
+});
+
+}); 
+
+</script> -->

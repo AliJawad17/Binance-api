@@ -53,10 +53,6 @@ const getAddOrderView = async (req, res, next) => {
 //     res.render('setupTrade');
 // }
 
-const onChange = (event) => {
-    console.log('event', event);
-}
-
 const addOrder = async (req, res, next) => {
     // const {error} = validate(req.body);
     // if(error) return res.status(422).send(error.details[0].message);
@@ -78,15 +74,21 @@ const addOrder = async (req, res, next) => {
             APISECRET: conf.secretKey
         });
         console.log('binance response', 111);
-        console.info( await binance.futuresBalance() );
-        console.info( await binance.futuresLiquidationOrders() );
-        // console.info(await binance.futuresLeverage( data.tokenname, conf.leverage ));
+        // let balance = await binance.futuresBalance();
+        // console.info(balance = balance[1]['availableBalance'] );
+        // console.info( await binance.futuresLiquidationOrders() );
+        console.info(await binance.futuresLeverage( data.tokenname, conf.leverage ));
         // console.info( await binance.futuresMarginType( 'BNBUSDT', 'CROSSED' ) );
+        let tickersQuantity;
+        let price = await binance.prices(data.tokenname, (error, ticker) => {
+            console.info("Price of BNB: ", ticker[data.tokenname]);
+            tickersQuantity = +data.amount/ticker[data.tokenname];
+            console.log('tickersQuantity',data.amount, tickersQuantity);
+            // await binance.futuresBuy( data.tokenname, tickersQuantity, data.buyprice );
+          });
+          console.log('tickersQuantity', tickersQuantity);
         // console.info( await binance.futuresMarketBuy( data.tokenname, data.amount ) );
-        // console.log('binance response', respon);
-        //})
         // order = await order.save();
-        // console.info( await binance.futuresMarketBuy( tokenname, amount, { newOrderRespType: 'RESULT' } ) );
         res.redirect('/allOrders');
     }else{
         res.redirect('/allOrders');
@@ -157,8 +159,7 @@ module.exports = {
     getUpdateOrderView,
     updateOrder,
     getDeleteOrderView,
-    deleteOrder,
-    onChange
+    deleteOrder
     // setupTrade,
     // setupTradeView
 }
