@@ -1,6 +1,6 @@
 const express = require('express');
 const {getAllOrders, getAddOrderView, addOrder,
-        getUpdateOrderView, updateOrder, getDeleteOrderView, deleteOrder, 
+        getUpdateOrderView, updateOrder, getDeleteOrderView, deleteOrder, getStatusOrderView
         // setupTrade, setupTradeView
         } = require('../controllers/orderController');
 
@@ -11,6 +11,7 @@ router.get('/allOrders', getAllOrders);
 router.get('/addOrder', getAddOrderView);
 router.post('/addOrder', addOrder);
 router.get('/updateOrder/:id', getUpdateOrderView);
+router.get('/statusOrder/:id', getStatusOrderView);
 router.post('/updateOrder/:id', updateOrder);
 router.get('/deleteOrder/:id', getDeleteOrderView);
 router.post('/deleteOrder/:id', deleteOrder);

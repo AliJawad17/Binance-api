@@ -60,7 +60,8 @@ const addOrder = async (req, res, next) => {
     let order = await new Order({
         tokenname: data.tokenname,
         buyprice: data.buyprice,
-        stoploss: data.stoploss,
+        // sellprice: data.sellprice,
+        trailingstoploss: data.trailingstoploss,
         amount: data.amount,
         confId: data.confId
     });
@@ -77,19 +78,44 @@ const addOrder = async (req, res, next) => {
         // let balance = await binance.futuresBalance();
         // console.info(balance = balance[1]['availableBalance'] );
         // console.info( await binance.futuresLiquidationOrders() );
+        let lvrge = await binance.futuresLeverageBracket( "LINKUSDT" );
+        console.info( 'leverage bracket', lvrge[0]['brackets'][0] );
+        console.info( 'leverage bracket', lvrge[0]['brackets'][1] );
+        console.info( 'leverage bracket', lvrge[0]['brackets'][2] );
         console.info(await binance.futuresLeverage( data.tokenname, conf.leverage ));
         // console.info( await binance.futuresMarginType( 'BNBUSDT', 'CROSSED' ) );
         let tickersQuantity;
-        let price = await binance.prices(data.tokenname, (error, ticker) => {
-            console.info("Price of BNB: ", ticker[data.tokenname]);
+        let price = await binance.prices(data.tokenname, async (error, ticker) => {
+            console.info("Price of COIN: ", ticker[data.tokenname]);
             tickersQuantity = +data.amount/ticker[data.tokenname];
-            console.log('tickersQuantity',data.amount, tickersQuantity);
-            // await binance.futuresBuy( data.tokenname, tickersQuantity, data.buyprice );
+            console.log('tickersQuantity',data.amount, tickersQuantity, +data.buyprice, +data.trailingstoploss);
+            let buyorder = await binance.futuresBuy( data.tokenname, 50, +data.buyprice);
+            console.log('roder resp', buyorder);
+            if (buyorder['msg']){
+                console.log('in resp', buyorder);
+                res.status(400).send({message: buyorder['msg']});
+                // alert(ord['msg']);
+            }else{
+                order['buyorderId'] = buyorder['orderId'];
+                order['quantity'] = tickersQuantity;
+                let sellPrice = (+data.trailingstoploss/100)*data.buyprice;
+                sellPrice = data.buyprice - sellPrice;
+                console.log('sell proice', sellPrice);
+                let sellOrder = await binance.futuresSell( data.tokenname, 50, 0.175);
+                console.log('sellOrder', sellOrder);
+                if(sellOrder['orderId']){
+                    console.log('out resp', sellOrder);
+                    order['sellorderId'] = sellOrder['orderId'];
+                    console.log('out resp', order);
+                    order = await order.save();
+                }
+                
+            }
+            
           });
-          console.log('tickersQuantity', tickersQuantity);
+        //   console.log('tickersQuantity', tickersQuantity);
         // console.info( await binance.futuresMarketBuy( data.tokenname, data.amount ) );
-        // order = await order.save();
-        res.redirect('/allOrders');
+        
     }else{
         res.redirect('/allOrders');
     }
@@ -105,6 +131,28 @@ const getUpdateOrderView = async (req, res, next) => {
         const oneorder = await Order.findById(id).exec();
         res.render('orderLayout/updateOrder', {
             order: oneorder, confs:confs
+        });
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
+
+const getStatusOrderView = async (req, res, next) => {
+    try {
+        const id = req.params.id;
+        const oneorder = await Order.findById(id).exec();
+        const conf = await Conf.findById(oneorder['confId']).exec();
+        binance = new Binance().options({
+            APIKEY: conf.apiKey,
+            APISECRET: conf.secretKey
+        });
+        let status = await binance.futuresOrderStatus( oneorder['tokenname'], 
+        {orderId: oneorder['buyorderId']} );
+        console.log('status', status);
+        res.render('orderLayout/statusOrder', {
+            order: oneorder, 
+            status: status, 
+            confs: conf
         });
     } catch (error) {
         res.status(400).send(error.message);
@@ -159,7 +207,8 @@ module.exports = {
     getUpdateOrderView,
     updateOrder,
     getDeleteOrderView,
-    deleteOrder
+    deleteOrder,
+    getStatusOrderView
     // setupTrade,
     // setupTradeView
 }

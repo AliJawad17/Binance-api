@@ -1,5 +1,41 @@
 <div class="card">
     <div class="card-header">
+        <!-- <script src="/socket.io/socket.ioo.js"></script> -->
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script>
+           
+
+            const socket = io("ws://localhost:3000");
+
+            socket.on("connect", () => {
+            // either with send()
+            socket.send("Hello!");
+
+            // or with emit() and custom event names
+            socket.emit("salutations", "Hello!", { "mr": "john" }, Uint8Array.from([1, 2, 3, 4]));
+            });
+
+            // handle the event sent with socket.send()
+            socket.on("message", data => {
+            console.log('MESSAGE DATA', data);
+            });
+
+            // handle the event sent with socket.emit()
+            socket.on("greetings", (elem1, elem2, elem3) => {
+            console.log('ELEMENTS',elem1, elem2, elem3);
+            });
+
+            // socket.on("connect", () => {
+            // // either with send()
+            // console.log('all ticker called');
+            // socket.send("Hello!");
+
+            // // or with emit() and custom event names
+            // socket.emit("salutations", "Hello!", { "mr": "john" }, Uint8Array.from([1, 2, 3, 4]));
+            // });
+        </script>
+        
         <div class="row">
             <div class="col-8">
                 <h4 class="font-weight-bold">Tickers</h4>
@@ -11,6 +47,7 @@
     </div>
     <div class="card-body">
         <table class="table table-hover">
+            
             <thead class="table-dark">
                 <tr>
                     <th scope="col">NAME</th>
@@ -41,7 +78,10 @@
                         <td>No data found</td>
                     </tr>
                 <% } %>
+                <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+            <!-- <script src="chat.js"></script> -->
             </tbody>
             </table>
+            
     </div>
 </div>

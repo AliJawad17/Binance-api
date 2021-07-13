@@ -36,8 +36,9 @@ const getAvailableBalance = async (req, res, next) => {
         APISECRET: key.secretKey
     });
     console.log('binance response', 111);
-    let balance = await binance.futuresBalance();
-    console.info(balance = balance[1]['availableBalance'] );
+    let balance;
+    console.info(balance = await binance.futuresBalance());
+    console.info('available balance', balance = balance[1]['availableBalance'] );
     
     return res.status(200).send({
         message: "found the balance",

@@ -15,13 +15,31 @@ const orderSchema = new mongoose.Schema({
         // maxlength: 50,
         required: true
     }, 
-    stoploss: {
+    buyorderId: {
+        type: Number,
+    }, 
+    sellorderId: {
+        type: Number,
+    }, 
+    // sellprice: {
+    //     type: Number,
+    //     min: 0,
+    //     // minlength: 5,
+    //     // maxlength: 50,
+    //     required: true
+    // }, 
+    trailingstoploss: {
+        type: Number,
+        min: 1,
+        max: 100
+    }, 
+    amount: {
         type: Number,
         min: 0,
         // minlength: 11,
         required: true
-    }, 
-    amount: {
+    },
+    quantity: {
         type: Number,
         min: 0,
         // minlength: 11,
@@ -39,7 +57,10 @@ const validateOrder = (order) => {
     const schema = {
         tokenname: Joi.string().max(50).required(),
         buyprice: Joi.Number().min(0).required(),
-        stoploss: Joi.Number().min(0).required(),
+        // sellprice: Joi.Number().min(0).required(),
+        orderId: Joi.Number().min(0).required(),
+        quantity: Joi.Number().min(0).required(),
+        trailingstoploss: Joi.Number(),
         amount: Joi.Number().required(),
         // address: Joi.string().required()
     }

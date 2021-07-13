@@ -11,7 +11,11 @@
     // const $ = require( "jquery" )( window );
     // const Binance = require('node-binance-api');
         $(document).ready(function()
-            {
+        {
+            
+            $('button').click((event)=>{
+                console.log('button event called', event);
+            })
             $("select").change(async function(event){
                 // alert("Hello World");
                 var data = $("data").val();
@@ -94,25 +98,6 @@
                         <input type="text" class="form-control" name="tokenname" placeholder="Enter Token name" id="tokenname">
                     </div> -->
                 </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label class="col-form-label" for="buyprice">Buy Price</label>
-                        <input type="number" class="form-control" name="buyprice" placeholder="Enter Buy Price" id="buyprice">
-                    </div>
-                </div>
-                <!-- <button onclick=""></button> -->
-                <div class="col-6">
-                    <div class="form-group">
-                        <label class="col-form-label" for="stoploss">Stop Loss</label>
-                        <input type="number" class="form-control" name="stoploss" placeholder="Enter your Stop Loss" id="stoploss">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label class="col-form-label" for="amount">Amount</label>
-                        <input type="text" class="form-control" name="amount" placeholder="Enter your Amount" id="amount">
-                    </div>
-                </div>
                 <div class="col-6 form-group">
                     <label class="col-form-label" for="confId">Configuration</label>
                     <select name="confId" id="confId" class="form-control" change="onChange($event)">
@@ -126,8 +111,33 @@
                             <option value="<%= conf.id %>"><%= conf.name %></option>
                         <% } %>
                     </select>
-                  <!-- <div *ngIf="titleSelect.controls['title'].errors?.required &&
-                  titleSelect.controls['title'].touched" class="required">Option Required</div> -->
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="buyprice">Buy Price</label>
+                        <input type="text" class="form-control" name="buyprice" placeholder="Enter Buy Price" id="buyprice">
+                    </div>
+                </div>
+                <!-- <button onclick=""></button> -->
+                <!-- <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="sellprice">Sell Price</label>
+                        <input type="text" class="form-control" name="sellprice" placeholder="Enter Sell Price" id="sellprice">
+                    </div>
+                </div> -->
+                
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="trailingstoploss">Trailing Stop Loss</label>
+                        <input type="number" class="form-control" name="trailingstoploss" 
+                        placeholder="Enter Trailing Stop Loss" id="trailingstoploss" min="1" max="100">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="amount">Amount</label>
+                        <input type="text" class="form-control" name="amount" placeholder="Enter your Amount" id="amount">
+                    </div>
                 </div>
                 <!-- <div class="col-6">
                     <div class="form-group">

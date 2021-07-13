@@ -1,4 +1,18 @@
 const {Ticker, validate} = require('../models/ticker');
+
+const io = require('../index.js');
+const server = require('../index.js');
+
+const sock = require('socket.io')(server, {
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"],
+        transports: ['websocket', 'polling'],
+        credentials: true
+    },
+    allowEIO3: true
+  });
+// var socketService = require('../socket');
 // const io = require('socket.io')(80);
 // const cfg = require('./config.json');
 // const tw = require('node-binance-api')(cfg);
@@ -32,29 +46,59 @@ const binance = new Binance().options({
 // }
 
 const getAllTickers = async (req, res, next) => {
-    // console.info( await binance.futuresPrices() );
-    // console.info( await binance.futuresAccount() );
-    // binance.futuresMiniTickerStream( 'BTCUSDT', console.log );
-    // binance.futuresBookTickerStream( console.log );
-    let list = [], i=0;
-     await binance.futuresMiniTickerStream( miniTicker => {
-         if (i==10){
-            console.log('100 occurred');
-            i=0;
-         }
-         if(i==0 || i==10){
-            //  console.log(miniTicker)
-            res.render('tickerLayout/allTickers', {
-                tickers: miniTicker
-            });
-            // next();
-            i++;
-         }else{
-            i++;
-            console.log('100 not occurred', i);
-         }
-        list = miniTicker;
+
+    // console.log('io called', server);
+    // return res.render('tickerLayout/allTickers', {
+    //     tickers: "miniTicker"
+    // });
+    // await binance.futuresMiniTickerStream( miniTicker => {
+    //        return res.render('tickerLayout/allTickers', {
+    //         tickers: miniTicker
+    //     });
+    // });
+    // console.log('server called', server);
+    io.on("connection",  socket => {
+        console.log('ticker controller called');
+        socket.send("Hello!");
+         binance.futuresMiniTickerStream( miniTicker => {
+          res.render('tickerLayout/allTickers', {
+            tickers: miniTicker
+          });
+        });
+        socket.emit("greetings", "Hey!", { "ms": "jane" }, Buffer.from([4, 3, 3, 1]));
+        socket.on("message", (data) => {
+          console.log(data);
+        });
+        socket.on("salutations", (elem1, elem2, elem3) => {
+          console.log(elem1, elem2, elem3);
+        });
     });
+
+
+
+
+
+    //  await binance.futuresMiniTickerStream( miniTicker => {
+    //       res.render('tickerLayout/allTickers', {
+    //         tickers: miniTicker
+    //     });
+        //  if (i==10){
+        //     console.log('100 occurred');
+        //     i=0;
+        //  }
+        //  if(i==0 || i==10){
+        //     //  console.log(miniTicker)
+        //     res.render('tickerLayout/allTickers', {
+        //         tickers: miniTicker
+        //     });
+        //     // next();
+        //     i++;
+        //  }else{
+        //     i++;
+        //     console.log('100 not occurred', i);
+        //  }
+        // list = miniTicker;
+    // });
     // const list = await Ticker.find().exec();
 }
 
