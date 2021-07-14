@@ -3,6 +3,27 @@
         <h4 class="font-weight-bold">Add Coniguration</h4>
     </div>
     <div class="card-body">
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script>
+           
+
+            const socket = io("ws://localhost:3000");
+            socket.on("connect", () => {
+            // either with send()
+            socket.send("Hello!");
+            // or with emit() and custom event names
+            socket.emit("salutations", "Hello!", { "mr": "conf" }, Uint8Array.from([1, 2, 3, 4]));
+            });
+            // handle the event sent with socket.send()
+            socket.on("message", data => {
+            console.log('MESSAGE DATA', data);
+            });
+            // handle the event sent with socket.emit()
+            socket.on("greetings", (elem1, elem2, elem3) => {
+            console.log('ELEMENTS',elem1, elem2, elem3);
+            });
+        </script>
         <form action="/addConf" method="post">
             <div class="row">
                 <div class="col-6">

@@ -7,13 +7,14 @@
            
 
             const socket = io("ws://localhost:3000");
+            var tickers;
 
             socket.on("connect", () => {
             // either with send()
-            socket.send("Hello!");
+            socket.send("Hello from ticker!");
 
             // or with emit() and custom event names
-            socket.emit("salutations", "Hello!", { "mr": "john" }, Uint8Array.from([1, 2, 3, 4]));
+            socket.emit("salutations", "Hello!", { "mr": "ticker" }, Uint8Array.from([1, 2, 3, 4]));
             });
 
             // handle the event sent with socket.send()
@@ -22,10 +23,29 @@
             });
 
             // handle the event sent with socket.emit()
-            socket.on("greetings", (elem1, elem2, elem3) => {
-            console.log('ELEMENTS',elem1, elem2, elem3);
+            // socket.on("greetings", (elem1, elem2, elem3) => {
+            // console.log('ELEMENTS',elem1, elem2, elem3);
+            // });
+            socket.on("greetings", data => {
+            console.log('greetings',data);
             });
-
+            socket.on("new", tickers => {
+                var html = '';
+                for(var i=0;i<tickers.length;i++){
+                    html = html + `<tr>
+                        <td style="width:24%; text-overflow: ellipsis;">${tickers[i]['symbol']}</td>
+                        <td style="width:19%;">${tickers[i]['close']}</td>
+                        <td style="width:19%;">${tickers[i]['percentChange']}</td>
+                        <td style="width:19%;">${tickers[i]['high']}</td>
+                        <td style="width:19%;">${tickers[i]['low']}</td>
+                        </tr>`
+                }
+                document.getElementById("tablebody").innerHTML=html;
+            });
+            let j=0;
+            socket.on("trick", tickers => {
+                
+            });
             // socket.on("connect", () => {
             // // either with send()
             // console.log('all ticker called');
@@ -49,17 +69,17 @@
         <table class="table table-hover">
             
             <thead class="table-dark">
-                <tr>
+                <tr style="font-size: 14px;">
                     <th scope="col">NAME</th>
                     <th scope="col">PRICE</th>
-                    <th scope="col">CHANGE 24H</th>
+                    <th scope="col">CHANGE (%)</th>
                     <th scope="col">HIGH</th>
                     <th scope="col">LOW</th>
                     <!-- <th scope="col">Actions</th> -->
                 </tr>
             </thead>
-            <tbody>
-                <% if(tickers.length > 0) { %>
+            <tbody id="tablebody">
+                <!-- <% if(tickers.length > 0) { %>
                     <% for(let ticker of tickers) { %>
                     <tr>
                         <td><%= ticker.symbol %></td>
@@ -67,19 +87,13 @@
                         <td><%= ticker.open %></td>
                         <td><%= ticker.high %></td>
                         <td><%= ticker.low %></td>
-                        <!-- <td>
-                            <a href="/updateConf/<%= ticker._id %>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                            <a href="/deleteConf/<%= ticker._id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
-                        </td> -->
                     </tr>
                     <% } %>
                 <% } else { %>
                     <tr>
                         <td>No data found</td>
                     </tr>
-                <% } %>
-                <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-            <!-- <script src="chat.js"></script> -->
+                <% } %> -->
             </tbody>
             </table>
             

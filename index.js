@@ -11,11 +11,17 @@ const orderRoutes = require('./routes/orderRoutes');
 const tickerRoutes = require('./routes/tickerRoutes');
 const app = express();
 const port = 3000;
+const Binance = require('node-binance-api');
+
+const binance = new Binance().options({
+  APIKEY: '<key>',
+  APISECRET: '<secret>'
+});
 // var server = require('http').createServer(app);
 // var io = require('socket.io')(server);
 var server = require('http').Server(app);
 // var io = require('socket.io')(server);
-
+var tickerSocket;
 
 // const http = require('http');
 // const server = http.createServer(app);
@@ -62,10 +68,19 @@ const io = require("socket.io")(server, {
 io.on("connection", socket => {
   console.log('socket id', socket.id);
   // either with send()
-  socket.send("Hello! PAKISTAN");
 
+  // socket.emit('tickers', tickers);
+  tickerSocket = socket;
+  // console.log('tickerSocket in index', tickerSocket);
+  socket.send("Hello! from index");
+  // binance.futuresMiniTickerStream( miniTicker => {
+  //   res.render('tickerLayout/allTickers', {
+  //     tickers: miniTicker
+  //   });
+  // });
   // or with emit() and custom event names
-  socket.emit("greetings", "Hey!", { "ms": "jane" }, Buffer.from([4, 3, 3, 1]));
+  // socket.emit("greetings", "Hey!", { "ms": "jane" }, Buffer.from([4, 3, 3, 1]));
+  socket.emit("greetings", 'not working yet')
 
   // handle the event sent with socket.send()
   socket.on("message", (data) => {
@@ -76,9 +91,9 @@ io.on("connection", socket => {
   socket.on("salutations", (elem1, elem2, elem3) => {
     console.log(elem1, elem2, elem3);
   });
-  socket.on("disconnect", () => {
-    console.log('disconnect',socket.id); // undefined
-  });
+  // socket.on("disconnect", () => {
+  //   console.log('disconnect',socket.id); // undefined
+  // });
 });
 
 // io.on("connection", (socket)=> {
@@ -98,5 +113,5 @@ server.listen(port, function(){
 });
 
 module.exports.io = io;
+module.exports.tickerSocket = tickerSocket;
 module.exports.server = server;
-// module.exports.app = app;
