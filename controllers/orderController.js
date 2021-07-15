@@ -1,5 +1,8 @@
 const {Order, validate} = require('../models/order');
 const {Conf} = require('../models/conf');
+const io = require('../index.js');
+const {Worker, isMainThread, parentPort, workerData} = require('worker_threads');
+const tickerSocket = require('../index.js');
 const Binance = require('node-binance-api');
 
 binance = new Binance().options({
@@ -92,36 +95,96 @@ const addOrder = async (req, res, next) => {
             let buyorder = await binance.futuresBuy( data.tokenname, 50, +data.buyprice);
             console.log('roder resp', buyorder);
             if (buyorder['msg']){
-                console.log('in resp', buyorder);
+                console.log('in buy resp msg error', buyorder);
                 res.status(400).send({message: buyorder['msg']});
-                // alert(ord['msg']);
+                // alert(ord['msg']);a
             }else{
                 order['buyorderId'] = buyorder['orderId'];
                 order['quantity'] = tickersQuantity;
-                let sellPrice = (+data.trailingstoploss/100)*data.buyprice;
-                sellPrice = data.buyprice - sellPrice;
-                console.log('sell proice', sellPrice);
-                let sellOrder = await binance.futuresSell( data.tokenname, 50, 0.175);
-                console.log('sellOrder', sellOrder);
-                if(sellOrder['orderId']){
-                    console.log('out resp', sellOrder);
-                    order['sellorderId'] = sellOrder['orderId'];
-                    console.log('out resp', order);
-                    order = await order.save();
-                }
+                let sellprice = (+data.trailingstoploss/100)*data.buyprice;
+                sellprice = data.buyprice - sellprice;
+                console.log('sell proice', sellprice);
+                order['sellprice'] = sellprice;
+                order['currentprice'] = data.buyprice;
+                order = await order.save();
                 
+                setSocketForOrder(order);
+                // let temp = {_id: order._id,tokenname: order.tokenname,buyprice: order.buyprice,
+                // sellprice: order.sellprice, currentprice: order.currentprice, amount: order.amount,
+                // quantity: order.quantity, trailingstoploss: order.trailingstoploss,
+                // buyorderId: order.buyorderId, confId: order.confId}
+                // console.log('order response', order);
+                // if (isMainThread) {
+                //     const worker = new Worker('./controllers/worker.js', {workerData: temp});
+                //     worker.once('message', (result) => {
+                //     console.log('square of 5 is :', result);
+                // })
+                // } else {
+                //     parentPort.postMessage(workerData.num * workerData.num)
+                // }
+
+                res.redirect('/allOrders');
+
             }
-            
+              
           });
-        //   console.log('tickersQuantity', tickersQuantity);
-        // console.info( await binance.futuresMarketBuy( data.tokenname, data.amount ) );
         
     }else{
         res.redirect('/allOrders');
     }
-        
-    
-    
+}
+// const setSocketForOrder = (order) => {
+
+//     return  new  Promise((resolve, reject) => {
+//     const  worker  =  new  Worker('./controllers/worker.js', {
+//         workerData: order
+//     });
+//     worker.on("message", resolve);
+//     worker.on("error", reject);
+//     worker.on("exit", code  => {
+//         if (code  !==  0)
+//             reject(new  Error(`Worker stopped with exit code ${code}`));
+//         });
+//     });
+// };
+
+const setSocketForOrder = async(order) => {
+
+    let selector = order._id;
+    tickerSocket.io.emit('allOrder', 800);
+    let newOrder = await Order.findById({_id: order._id}).exec();
+    binance.futuresTickerStream( order.tokenname, async (stream) =>{
+        let status = await binance.futuresOrderStatus( order.tokenname, 
+            {orderId: order.buyorderId} );
+        console.log('status', status['status']);
+        // console.log('new order response', newOrder);
+        if (stream['close'] > newOrder['currentprice'] && status['status'] == 'FILLED'){
+            console.log('if stream value', stream['close'], newOrder['currentprice']);
+            let sellprice = (+newOrder.trailingstoploss/100)*stream['close'];
+            sellprice = stream['close'] - sellprice;
+            newOrder = await Order.findByIdAndUpdate(newOrder._id, {
+                tokenname: newOrder.tokenname,
+                buyprice: newOrder.buyprice,
+                sellprice: sellprice,
+                trailingstoploss: newOrder.trailingstoploss,
+                amount: newOrder.amount,
+                confId: newOrder.confId,
+                buyorderId: newOrder.buyorderId,
+                quantity: newOrder.quantity,
+                currentprice: stream['close']
+            }, {new: true});
+        }else if(stream['close'] <= newOrder.sellprice) {
+            console.log('else if stream value', stream['close'], newOrder['currentprice']);
+            let conf = await Conf.findById({_id: newOrder.confId}).exec();//, async (resp) => {
+            binance = new Binance().options({
+                APIKEY: conf.apiKey,
+                APISECRET: conf.secretKey
+            });
+            let sellOrder = await binance.futuresMarketSell( newOrder.tokenname, newOrder.quantity);
+        }else {
+            console.log('else stream value', stream['close'], newOrder['currentprice']);
+        }
+    });
 }
 
 const getUpdateOrderView = async (req, res, next) => {
@@ -167,7 +230,8 @@ const updateOrder = async(req, res, next) => {
     let order = await Order.findByIdAndUpdate(id, {
         tokenname: data.tokenname,
         buyprice: data.buyprice,
-        stoploss: data.stoploss,
+        // sellprice: data.sellprice,
+        trailingstoploss: data.trailingstoploss,
         amount: data.amount,
         confId: data.confId
     }, {new: true});

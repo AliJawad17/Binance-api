@@ -29,12 +29,12 @@ const getAllTickers = async (req, res, next) => {
   // 
   // module.exports.res = res;
     binance.futuresTickerStream( async miniTicker => {
-      
+      console.log('lenght',miniTicker.length);
       // io.emit('trick', miniTicker[0])
       tickerSocket.io.emit('new', miniTicker);
       // module.exports.tickers = miniTicker[0];
       if(i==0){
-        // console.log('lenght',miniTicker);
+        
         await res.render('tickerLayout/allTickers', {
           tickers: miniTicker
         });

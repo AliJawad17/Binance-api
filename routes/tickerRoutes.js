@@ -8,7 +8,7 @@ const {getAllTickers,
 
 const router = express.Router();
 
-router.get('/allTickers', getAllTickers);
+router.get('/', getAllTickers);
 // router.get('/addOrder', getAddOrderView);
 // router.post('/addOrder', addOrder);
 // router.get('/updateOrder/:id', getUpdateOrderView);

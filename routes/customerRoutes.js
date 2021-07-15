@@ -7,7 +7,7 @@ const {getAllCustomers, getAddCustomerView, addCustomer,
 
 const router = express.Router();
 
-router.get('/', getAllCustomers);
+router.get('/customerList', getAllCustomers);
 router.get('/addCustomer', getAddCustomerView);
 router.post('/addCustomer', addCustomer);
 router.get('/updateCustomer/:id', getUpdateCustomerView);

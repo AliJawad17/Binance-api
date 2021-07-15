@@ -15,19 +15,24 @@ const orderSchema = new mongoose.Schema({
         // maxlength: 50,
         required: true
     }, 
+    currentprice: {
+        type: Number,
+        min: 0,
+        required: true
+    }, 
     buyorderId: {
         type: Number,
     }, 
-    sellorderId: {
-        type: Number,
-    }, 
-    // sellprice: {
+    // sellorderId: {
     //     type: Number,
-    //     min: 0,
-    //     // minlength: 5,
-    //     // maxlength: 50,
-    //     required: true
     // }, 
+    sellprice: {
+        type: Number,
+        min: 0,
+        // minlength: 5,
+        // maxlength: 50,
+        required: true
+    }, 
     trailingstoploss: {
         type: Number,
         min: 1,

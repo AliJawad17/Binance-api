@@ -746,3 +746,98 @@
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-14T15:35:49.067Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-14T15:36:59.967Z"}
 {"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-14T15:39:13.723Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T06:17:34.238Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T06:33:14.000Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T06:39:17.688Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T06:40:16.399Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:18:34.580Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:19:32.401Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:20:06.991Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:20:13.417Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:31:24.799Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:32:33.013Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:35:27.444Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:39:31.728Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:40:40.493Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:42:22.665Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:50:03.907Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:54:09.351Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:54:36.998Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:55:40.630Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:57:50.727Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T07:58:24.219Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:03:07.540Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:07:06.668Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:07:26.302Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:07:54.729Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:24:09.797Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:54:45.183Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T08:57:43.468Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:19:38.559Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:22:10.710Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:24:35.702Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:32:24.387Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:40:01.631Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:42:25.492Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:46:01.029Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T09:49:38.196Z"}
+{"message":"ESOCKETTIMEDOUT","stack":"Error: ESOCKETTIMEDOUT\n    at ClientRequest.<anonymous> (C:\\data\\code\\CRUD\\node_modules\\request\\request.js:816:19)\n    at Object.onceWrapper (events.js:421:28)\n    at ClientRequest.emit (events.js:315:20)\n    at TLSSocket.emitRequestTimeout (_http_client.js:721:9)\n    at Object.onceWrapper (events.js:421:28)\n    at TLSSocket.emit (events.js:327:22)\n    at TLSSocket.Socket._onTimeout (net.js:481:8)\n    at listOnTimeout (internal/timers.js:549:17)\n    at processTimers (internal/timers.js:492:7)","code":"ESOCKETTIMEDOUT","connect":false,"level":"error","timestamp":"2021-07-15T10:00:42.529Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T10:24:25.037Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T10:25:43.244Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T11:31:23.058Z"}
+{"message":"Route.get() requires a callback function but got a [object Undefined]","name":"Error","stack":"Error: Route.get() requires a callback function but got a [object Undefined]\n    at Route.<computed> [as get] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\route.js:202:15)\n    at Function.proto.<computed> [as get] (C:\\data\\code\\CRUD\\node_modules\\express\\lib\\router\\index.js:510:19)\n    at Object.<anonymous> (C:\\data\\code\\CRUD\\routes\\orderRoutes.js:10:8)\n    at Module._compile (internal/modules/cjs/loader.js:1147:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)\n    at Module.load (internal/modules/cjs/loader.js:996:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:896:14)\n    at Module.require (internal/modules/cjs/loader.js:1036:19)\n    at require (internal/modules/cjs/helpers.js:72:18)\n    at Object.<anonymous> (C:\\data\\code\\CRUD\\index.js:10:21)\n    at Module._compile (internal/modules/cjs/loader.js:1147:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)\n    at Module.load (internal/modules/cjs/loader.js:996:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:896:14)\n    at Module.require (internal/modules/cjs/loader.js:1036:19)\n    at require (internal/modules/cjs/helpers.js:72:18)","level":"error","timestamp":"2021-07-15T11:34:17.541Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T11:35:20.822Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T11:40:50.143Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T11:42:37.249Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T12:20:19.016Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T12:20:44.218Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T12:23:53.874Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:00:12.306Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:00:14.559Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:02:54.104Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:04:30.793Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:05:51.886Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:08:18.918Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:08:33.009Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:12:28.705Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:12:52.664Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:15:40.552Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:15:51.734Z"}
+{"level":"error","message":"function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned. DOMException [DataCloneError]: function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned.\n    at new Worker (internal/worker.js:171:17)\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:113:36\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","timestamp":"2021-07-15T13:16:43.068Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:18:12.978Z"}
+{"level":"error","message":"function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned. DOMException [DataCloneError]: function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned.\n    at new Worker (internal/worker.js:171:17)\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:113:36\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","timestamp":"2021-07-15T13:18:26.189Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:18:56.571Z"}
+{"level":"error","message":"function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned. DOMException [DataCloneError]: function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned.\n    at new Worker (internal/worker.js:171:17)\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:113:36\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","timestamp":"2021-07-15T13:19:12.258Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:22:06.722Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:23:54.127Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:26:10.910Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:27:33.229Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:27:57.206Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:30:15.953Z"}
+{"level":"error","message":"function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned. DOMException [DataCloneError]: function() {\n    const numArgs = arguments.length;\n    let states = utils.args(arguments, 0, numArgs - 1);\n    ...<omitted>... } could not be cloned.\n    at new Worker (internal/worker.js:171:17)\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:115:36\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","timestamp":"2021-07-15T13:30:38.479Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:33:54.038Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:34:08.689Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:39:11.984Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:39:44.176Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:45:07.279Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:49:51.913Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:51:51.875Z"}
+{"message":"Cannot read property 'availableBalance' of undefined","stack":"TypeError: Cannot read property 'availableBalance' of undefined\n    at getAvailableBalance (C:\\data\\code\\CRUD\\controllers\\confController.js:41:59)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-15T13:52:13.099Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:52:31.136Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T13:54:03.309Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:07:05.623Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:08:23.132Z"}
+{"message":"Cannot read property 'availableBalance' of undefined","stack":"TypeError: Cannot read property 'availableBalance' of undefined\n    at getAvailableBalance (C:\\data\\code\\CRUD\\controllers\\confController.js:41:59)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-15T14:51:41.605Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:51:59.590Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:53:39.398Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:56:03.659Z"}
+{"message":"order.save(...).exec is not a function","stack":"TypeError: order.save(...).exec is not a function\n    at C:\\data\\code\\CRUD\\controllers\\orderController.js:109:44\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-15T14:56:39.402Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T14:56:53.932Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:03:54.053Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:15:51.361Z"}
+{"message":"Cannot read property 'availableBalance' of undefined","stack":"TypeError: Cannot read property 'availableBalance' of undefined\n    at getAvailableBalance (C:\\data\\code\\CRUD\\controllers\\confController.js:41:59)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)","level":"error","timestamp":"2021-07-15T15:16:29.729Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:18:05.700Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:20:52.436Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:26:27.643Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:54:08.457Z"}
+{"level":"info","message":"MongoDb connected successfuly...","timestamp":"2021-07-15T15:56:31.326Z"}

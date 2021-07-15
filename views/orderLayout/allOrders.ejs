@@ -1,5 +1,26 @@
 <div class="card">
     <div class="card-header">
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script>
+
+            const socket = io("ws://localhost:3000");
+            var tickers;
+            console.log('Thank God');
+            socket.on("allOrder", data => {
+            console.log('allOrder',data);
+            });
+            socket.on("ordercontroller", (data) => {
+                console.log('all order ejs called');
+
+            });
+
+
+        </script>
+
+
+
+
         <div class="row">
             <div class="col-8">
                 <h4 class="font-weight-bold">All Orders</h4>

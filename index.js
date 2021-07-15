@@ -66,7 +66,7 @@ const io = require("socket.io")(server, {
 });
 // require('./controllers/tickerController.js')(io);
 io.on("connection", socket => {
-  console.log('socket id', socket.id);
+  console.log('socket id index', socket.id);
   // either with send()
 
   // socket.emit('tickers', tickers);
